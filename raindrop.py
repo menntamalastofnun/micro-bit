@@ -1,3 +1,4 @@
+# Add your Python code here. E.g.
 from microbit import *
 import random
 
@@ -48,6 +49,9 @@ def delete_raindrops():
 def create_raindrop():
     if random.randint(0,2) == 0:
         raindrops.append(Raindrop())
+    if len(raindrops) == 0:
+        raindrops.append(Raindrop())
+
 
 def draw_scene():
     display.set_pixel(bucket.x, bucket.y, bucket.value)
